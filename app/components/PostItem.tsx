@@ -16,7 +16,7 @@ const PostItem: React.FC<PostItemProps> = ({ postitems }) => {
     return (
         <div className="flex flex-wrap gap-4 cursor-pointer">
             {postitems.map((item, index) => (
-                <div key={index} className="max-w-[505px] mx-auto bg-white rounded-[20px] shadow-lg overflow-hidden transform transition duration-300 hover:scale-101 hover:shadow-xl">
+                <a href="/detailpost" key={index} className="max-w-[505px] mx-auto bg-white rounded-[20px] shadow-lg overflow-hidden transform transition duration-300 hover:scale-101 hover:shadow-xl">
                     {/* Image */}
                     <div className="pointer-events-none">
                         <Image
@@ -57,7 +57,7 @@ const PostItem: React.FC<PostItemProps> = ({ postitems }) => {
                                 <span className="text-base text-gray-600 ml-2">{item.readingTime}</span>
                             </div>
                         </div>
-                        <a href="#" className="flex gap-5 text-[#667F93] hover:underline">
+                        <div className="flex gap-2 text-[#667F93] hover:underline">
                             <span>Khám phá thêm</span>
                             <Image
                                 src="/images/right-icon.png"
@@ -66,9 +66,9 @@ const PostItem: React.FC<PostItemProps> = ({ postitems }) => {
                                 height={15}
                                 className="object-contain"
                             />
-                        </a>
+                        </div>
                     </div>
-                </div>
+                </a>
             ))}
         </div>
     );

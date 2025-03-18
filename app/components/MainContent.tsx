@@ -27,7 +27,7 @@ const MainContent: React.FC = () => {
     ];
 
     return (
-        <div className="w-[1440px] mx-auto mt-12">
+        <div className="w-[1440px] mx-auto mt-12 mb-20">
             <div className="flex">
                 <div className="w-full md:w-3/4 p-3">
                     <div className="">

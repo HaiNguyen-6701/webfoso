@@ -133,7 +133,7 @@ const Header: React.FC<HeaderProps> = ({ logoSrc, logoAlt, menuItems }) => {
 
 
             {/* Box with "Trở thành khách hàng" */}
-            <div className="flex items-center bg-[#1AD598] h-auto rounded-[40px] gap-2 px-4 py-2 justify-between">
+            <a href="/detailpost" className="flex items-center bg-[#1AD598] h-auto rounded-[40px] gap-2 px-4 py-2 justify-between">
               <span className=" font-semibold text-base">Trở thành khách hàng</span>
               <div className="flex items-center justify-center w-[32px] h-[32px] bg-black rounded-full">
                 <Image
@@ -144,7 +144,7 @@ const Header: React.FC<HeaderProps> = ({ logoSrc, logoAlt, menuItems }) => {
                   className="object-contain"
                 />
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
