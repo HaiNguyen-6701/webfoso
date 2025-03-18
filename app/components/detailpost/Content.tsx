@@ -92,7 +92,7 @@ const Content: React.FC = () => {
                 <div className="my-6 text-xl font-semibold text-[var(--primary-color)]">1. Quy trình 5S là gì?</div>
                 <div>Quy trình 5S được biết đến là mô hình quản trị tinh gọn trong sản xuất. Nguồn gốc của quy trình 5S là đến từ xứ sở hoa anh đào Nhật Bản. </div>
                 <div className='mt-6'>Quy trình 5S hiện nay đang được rất nhiều nước trên thế giới vận dụng bởi tính hiệu quả mà 5S mang lại. Quy trình này bao gồm 5 chữ S đầu trong tiếng Nhật:</div>
-                <ul className="list-disc list-inside space-y-2 my-9">
+                <ul className="list-disc list-inside space-y-2 my-9 font-semibold">
                     <li className="text-lg">
                         <span className="text-[var(--primary-color)]">Seiri</span> (Ngăn nắp)
                     </li>
