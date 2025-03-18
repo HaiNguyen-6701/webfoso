@@ -4,6 +4,8 @@ interface ContentSectionProps {
   imageSrc: string;
   imageAlt: string;
   title: string;
+  titleSection: string;
+  contentSection: string;
   textColor: string;
   subSections: {
     subTitle: string;
@@ -16,6 +18,8 @@ const HomePage = () => {
     imageSrc: "/images/image-2.png",
     imageAlt: "image-1",
     title: "Tại sao doanh nghiệp cần quy trình 5S?",
+    titleSection: "3. Tại sao doanh nghiệp nên áp dụng quy trình 5S?",
+    contentSection: "Có thể nói quy trình được áp dụng rộng rãi tại các doanh nghiệp trên toàn thế giới, bao gồm cả Việt Nam. Điều này càng chứng minh rõ nét tính hiệu quả của quy trình đem lại. Sau đây là các lý do vì sao bạn nên lựa chọn quy trình:",
     textColor: "var(--primary-color)",
     subSections: [
       {
@@ -45,6 +49,8 @@ const HomePage = () => {
     imageSrc: "/images/image-3.png",
     imageAlt: "image-2",
     title: "Quy trình 5s gồm các bước",
+    titleSection: "4. Quy trình 5S gồm các bước",
+    contentSection: "5S là một phương pháp quản lý tổ chức, sắp xếp và tăng cường hiệu quả làm việc trong một tổ chức hoặc doanh nghiệp. 5S bao gồm năm bước cơ bản sau:",
     textColor: "var(--primary-color)",
     subSections: [
       {
@@ -74,6 +80,8 @@ const HomePage = () => {
     imageSrc: "/images/image-4.png",
     imageAlt: "image-3",
     title: "Các bước thực hiện quy trình 5s",
+    titleSection: "5. Quy trình được thực hiện như sau:",
+    contentSection: "Có thể nói quy trình được áp dụng rộng rãi tại các doanh nghiệp trên toàn thế giới, bao gồm cả Việt Nam. Điều này càng chứng minh rõ nét tính hiệu quả của quy trình đem lại. Sau đây là các lý do vì sao bạn nên lựa chọn quy trình:",
     textColor: "var(--primary-color)",
     subSections: [
       {
@@ -108,20 +116,24 @@ const HomePage = () => {
   );
 };
 
-const ContentSection: React.FC<ContentSectionProps> = ({ imageSrc, imageAlt, title, textColor, subSections }) => {
+const ContentSection: React.FC<ContentSectionProps> = ({ imageSrc, imageAlt, title, titleSection, contentSection, textColor, subSections }) => {
   return (
     <div className="">
-      <div className="">
+      <div className="my-8">
         <div>
           <Image src={imageSrc} alt={imageAlt} width={900} height={600} className="object-contain w-full" />
         </div>
         <div className="text-[#667F93] text-[20px] text-center mt-2">{title}</div>
       </div>
       <div className="">
+        <div className="">
+          <div className="text-[var(--primary-color)] text-2xl font-semibold">{titleSection}</div>
+          <div className="">{contentSection}</div>
+        </div>
         {subSections.map((section, index) => (
           <div key={index} className="my-6">
             <div className={`font-semibold text-[${textColor}]`}>{section.subTitle}</div>
-            <div>{section.content}</div>
+            <div className='mt-2'>{section.content}</div>
           </div>
         ))}
       </div>

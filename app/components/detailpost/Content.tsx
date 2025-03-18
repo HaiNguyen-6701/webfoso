@@ -128,7 +128,7 @@ const Content: React.FC = () => {
                 <div>Tuy nhiên, quy trình 5S được xem là một phần của Kaizen. Và quy tắc này đóng vai trò quan trọng trong việc tạo ra môi trường làm việc sạch sẽ, an toàn. Quy tắc 5S thường được sử dụng làm bước đầu tiên trong quá trình cải tiến liên tục của phương pháp Kaizen để tạo ra một nền tảng vững chắc cho các hoạt động cải tiến tiếp theo.</div>
             </div>
             <div className="section-4">
-                <div>
+                <div className='mt-6'>
                     <Image
                         src="/images/image-5.png"
                         alt="image-1"

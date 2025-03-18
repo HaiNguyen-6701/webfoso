@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Image from "next/image";
 import AdvertisementFirst from "../AdvertisementFirst";
 import AdvertisementSecond from "../AdvertisementSecond";
 
@@ -49,7 +50,18 @@ const DetailPostSidebar: FC = () => {
     return (
         <div className="mx-auto mt-12">
             <div className="text-xl">
-                <div className="text-4xl font-semibold mb-6">Nội dung bài viết</div>
+                <div className="flex justify-between items-center">
+                    <div className="text-4xl font-semibold mb-6">Nội dung bài viết</div>
+                    <div className="mr-30">
+                        <Image
+                            src="/images/top-arrow-primary.png"
+                            alt="image-1"
+                            width={900}
+                            height={600}
+                            className="object-contain w-full"
+                        />
+                    </div>
+                </div>
                 <ol className="list-decimal list-inside space-y-4 cursor-pointer">  {/* khoảng cách giữa các mục chính */}
                     {listItems.map((item, index) => (
                         <li key={index}>
